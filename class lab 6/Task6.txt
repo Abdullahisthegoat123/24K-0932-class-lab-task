@@ -1,0 +1,5 @@
+I’d use a queue since it works on a first-in, first-out basis.
+When a new order comes in, it’s enqueued (added to the back). Each order stores the item names and their quantities.
+When it’s time to prepare an order, it’s dequeued (removed from the front).
+Before removing, I’d always check if the queue is empty to avoid underflow, and if it’s a fixed size check if it’s full before adding to prevent overflow.
+To print processed orders, I’d simply output them as they’re dequeued so they appear in the same order they were received.
